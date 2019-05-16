@@ -68,8 +68,6 @@ def get_port_list(port):
         bs4o = BeautifulSoup(resp, "html.parser")
         port_table = bs4o.find("table", {"class": "port"})
         for port_entry in port_table.find_all('tr'):
-            print("================")
-            #print(port_entry)
             line_entry = []
 
             # Get headers
@@ -87,42 +85,6 @@ def get_port_list(port):
 
             # Append to table
             table_list.append(line_entry)
-        # for entry in port_table:
-            
-        #     for port_html in str(entry).split("<tr"):
-        #         # try:
-        #         #     line_entry = []
-        #         #     pt0 = port_html.split("\n")
-        #         #     #print(pt0)
-        #         #     pt = [pt0[0], pt0[1], pt0[3]]
-        #         #     pt = pt0
-        #         #     for line in pt:
-        #         #         if line.startswith("<th"):
-        #         #             line_entry.append(line.replace("<th>", "").replace("</th>", ""))
-        #         #         if line.startswith("<td"):
-        #         #             section = line.split(">")[1].split("<")[0]
-        #         #             section = textwrap.shorten(section, width=70)
-        #         #             line_entry.append(section)
-        #         #     if line_entry != []:
-        #         #         table_list.append(line_entry)
-        #         # except:
-        #         #     pass
-        #         counter = 0
-        #         line_entry = []
-
-        #         for line in port_html.split('\n'):
-        #             print("==============")
-        #             print(line)
-        #             counter += 1
-
-        #             # Port
-        #             if counter == 2:
-        #                 pass
-
-        #             # Protocol
-        #             if counter == 3:
-        #                 pass
-
     return table_list
 
 
