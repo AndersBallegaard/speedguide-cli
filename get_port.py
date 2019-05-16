@@ -70,7 +70,7 @@ def get_port_list(port):
                 try:
                     line_entry = []
                     pt0 = port_html.split("\n")
-                    print(pt0)
+                    #print(pt0)
                     pt = [pt0[0], pt0[1], pt0[3]]
                     pt = pt0
                     for line in pt:
